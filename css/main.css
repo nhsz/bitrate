@@ -1,0 +1,34 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  margin: 0 auto;
+  font-family: monospace; 
+  background-color: #0c2d40;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+.bitfinex-rate {
+  text-align: center;
+  color: #949494;
+  font-size: 2.25em;
+  font-weight: bold;
+}
+
+.header-bitfinex {
+  color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  font-size: 2.25em;
+  margin-bottom: 5px;
+}
+
+#canvas {
+  margin-top: 25px;
+}
