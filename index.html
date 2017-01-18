@@ -8,16 +8,16 @@
   <meta name="author" content="Nicolas Quiroz">
   <meta name="description" content="Bitcoin real-time exchange.">
   <link rel="stylesheet" href="css/main.css">
+  <script async src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+  <script async src="scripts/main.js"></script>
 </head>
 <body onload="main()">
   <main class="container">
     <h1 class="header-bitfinex">Bitfinex BTC/USD</h1>
     <div class="bitfinex-rate"></div>
     <div class="rate-chart">
-      <canvas id="canvas"></canvas>
+      <canvas id="priceChart"></canvas>
     </div>
   </main>
-  <script async src="scripts/main.js"></script>
-  <script async src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
 </body>
 </html>
