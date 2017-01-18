@@ -12,9 +12,8 @@ body {
 }
 
 .container {
-  margin: 0 auto;
+  margin: 50px auto;
   width: 100%;
-  height: 530px;
 }
 
 .bitfinex-rate {
@@ -32,13 +31,13 @@ body {
 }
 
 .rate-chart {
-  
-}
-
-#canvas {
-  border: 2px solid red;
   margin: 0 auto;
   display: block;
   width: 100% !important;
-  height: 300px;
 }
+
+/*#priceChart {
+  margin: 0 auto;
+  display: block;
+  width: 100% !important;
+}*/

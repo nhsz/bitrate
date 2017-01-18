@@ -107,6 +107,7 @@ function main () {
         },
         options: {
           animation: false,
+          responsive: true,
           scales: {
             showScale: false,
             scaleShowVerticalLines: false,
