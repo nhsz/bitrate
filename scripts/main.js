@@ -1,7 +1,7 @@
 function main () {
   var urlBitfinex = 'https://api.bitfinex.com/v2/ticker/tBTCUSD';
   var lastRate = 0;
-  var updateFrequencyInMs = 7000; // the exchange rate is updated every 7 seconds by default
+  var updateFrequencyInMs = 30000; // the exchange rate is updated every 30 seconds by default
 
   var currentRateReq = new XMLHttpRequest();
   currentRateReq.onload = getRate;
