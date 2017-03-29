@@ -1,6 +1,6 @@
-# :heavy_dollar_sign: bitfinex-rate-viewer
+# :heavy_dollar_sign: bitrate
 
-> Simple Bitfinex Exchange rate viewer, built using **[`Bitfinex Rest API`](http://docs.bitfinex.com/v2/docs/getting-started)**. Visualized price turns red or green when it goes up or down, respectively.
+> Simple Bitcoin BTC/USD rate viewer, built using **[`Bitfinex Rest API`](http://docs.bitfinex.com/v2/docs/getting-started)**. Rate turns red or green when it goes up or down, respectively.
 
 ## License
 
