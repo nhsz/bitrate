@@ -31,13 +31,9 @@ body {
   font-size: 4em;
 }
 
-.source a, .code a {
+.source a {
   color: #cbdeda;
   font-size: 1.35em;
-}
-
-a {
-  text-decoration: none;
 }
 
 a:hover {
@@ -49,4 +45,15 @@ a:hover {
 
 .footer {
   margin-top: 33px;
+}
+
+.code {
+  padding-top: 30px;
+  color: #fff;
+  font-size: 1em;
+}
+
+a, .code-link {
+  text-decoration: none;
+  color: #fff;
 }
