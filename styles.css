@@ -1,19 +1,31 @@
 * {
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: transparent;
 }
 
 body {
-  align-items: center;
-  display: flex;
-  height: 100vh;
-  margin: 0 auto;
   background-color: #0c2d40;
   font-family: 'Fira Mono', monospace;
 }
 
+#app {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .container {
-  padding: 37px;
-  width: 100%;
   text-align: center;
 }
 
