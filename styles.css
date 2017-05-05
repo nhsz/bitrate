@@ -48,9 +48,9 @@ a:hover {
 }
 
 .code {
-  padding-top: 30px;
+  padding-top: 75px;
   color: #fff;
-  font-size: 1em;
+  font-size: 0.875em;
 }
 
 a, .code-link {
