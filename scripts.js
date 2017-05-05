@@ -1,9 +1,11 @@
 (function main () {
   var url = 'https://api.bitfinex.com/v2/ticker/tBTCUSD';
   var lastRate = 0;
-  var updateFrequencyInMs = 60000; // the exchange rate is updated every 60s
-
+  var updateFrequencyInMs = 30000; // the exchange rate is updated every 30s
   var currentRateReq = new XMLHttpRequest();
+
+  document.body.classList.add('spinner');
+
   currentRateReq.onload = getRate;
   currentRateReq.onerror = reqError;
   currentRateReq.open('get', url, true);
@@ -12,6 +14,7 @@
   function getRate () {
     lastRate = JSON.parse(this.responseText)[6];
     showRates(lastRate, lastRate);
+    removeOverlay();
   }
 
   setInterval(function () {
@@ -48,5 +51,10 @@
     document.querySelector(element).style.color = color;
     document.querySelector(element).innerHTML = roundedRate;
     document.querySelector(element).style.color = color;
+  }
+
+  function removeOverlay() {
+    document.querySelector('#overlay').remove();
+    document.body.classList.remove('spinner');
   }
 })();
