@@ -56,4 +56,13 @@
     document.querySelector('#overlay').remove()
     document.body.classList.remove('spinner')
   }
+
+  // register service worker
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker
+      .register('service-worker.js')
+      .then(function () {
+        console.log('Service Worker Registered')
+      })
+  }
 })()
