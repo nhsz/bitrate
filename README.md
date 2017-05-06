@@ -3,7 +3,7 @@
   <br>
 </h1>
 
-> Simple BTC/USD rate viewer, powered by **[`Bitfinex API`](http://docs.bitfinex.com/v2/docs)**.
+> Simple Progressive Web App to visualize current BTC/USD rate, powered by **[`Bitfinex API`](http://docs.bitfinex.com/v2/docs)**.
 
 ## License
 
