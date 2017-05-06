@@ -1,7 +1,7 @@
 {
   "name": "BitRate",
   "short_name": "BitRate",
-  "description": "BTC/USD rate viewer, powered by Bitfinex",
+  "description": "Simple BTC/USD rate viewer, powered by Bitfinex API",
   "display": "standalone",
   "start_url": "index.html",
   "orientation": "portrait",
