@@ -1,6 +1,10 @@
-# :heavy_dollar_sign: bitrate
+<h1 align="center">
+	<br>
+	<img src="https://cdn.rawgit.com/nhsz/bitrate/master/images/icon-192x192.png" alt="BitRate">
+	<br>
+</h1>
 
-> Simple Bitcoin BTC/USD rate viewer, built using **[`Bitfinex Rest API`](http://docs.bitfinex.com/v2/docs)**. Rate turns red or green when it goes up or down, respectively.
+> Simple BTC/USD rate viewer, powered by **[`Bitfinex API`](http://docs.bitfinex.com/v2/docs)**.
 
 ## License
 
