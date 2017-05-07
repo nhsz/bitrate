@@ -1,7 +1,10 @@
 (function main () {
-  var url = 'https://api.bitfinex.com/v2/ticker/tBTCUSD'
+  /* ----------------------------- CONFIG ----------------------------- */
+  const url = 'https://api.bitfinex.com/v2/ticker/tBTCUSD'
+  const updateFrequencyInMs = 30000 // exchange rate updated every 30s
+  /* ------------------------------------------------------------------ */
+
   var lastRate = 0
-  var updateFrequencyInMs = 30000 // the exchange rate is updated every 30s
   var currentRateReq = new XMLHttpRequest()
 
   document.body.classList.add('spinner')
