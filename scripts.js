@@ -14,12 +14,6 @@
   currentRateReq.open('get', url, true)
   currentRateReq.send()
 
-  function getRate () {
-    lastRate = JSON.parse(this.responseText)[6]
-    showRates(lastRate, lastRate)
-    removeOverlay()
-  }
-
   setInterval(function () {
     function reqListener () {
       var data = JSON.parse(this.responseText)
@@ -48,6 +42,12 @@
     } else if (rate < lastRate) {
       formatRate('.rate', '#de5f66', roundedRate)
     }
+  }
+
+  function getRate () {
+    lastRate = JSON.parse(this.responseText)[6]
+    showRates(lastRate, lastRate)
+    removeOverlay()
   }
 
   function formatRate (element, color, roundedRate) {
