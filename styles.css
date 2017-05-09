@@ -30,8 +30,9 @@ body {
 }
 
 .rate {
-  color: #949494;
+  color: #8bc040;
   font-weight: bold;
+  text-shadow: 1px 1px 1px #0b1005;
 }
 
 .header {
