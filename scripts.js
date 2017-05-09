@@ -1,65 +1,46 @@
 (function main () {
   /* ----------------------------- CONFIG ----------------------------- */
-  const url = 'https://api.bitfinex.com/v2/ticker/tBTCUSD'
+  const apiUrl = 'https://api.bitfinex.com/v2/ticker/tBTCUSD'
   const updateFrequencyInMs = 30000 // exchange rate updated every 30s
   /* ------------------------------------------------------------------ */
 
-  var lastRate = 0
-  var currentRateReq = new XMLHttpRequest()
+  var rate = {
+    current: 0
+  }
 
+  getRate()
   document.body.classList.add('spinner')
-
-  currentRateReq.onload = getRate
-  currentRateReq.onerror = reqError
-  currentRateReq.open('get', url, true)
-  currentRateReq.send()
+  var overlayAlreadyRemoved = false
 
   setInterval(function () {
-    function reqListener () {
-      var data = JSON.parse(this.responseText)
-      var rate = data[6]
-      showRates(rate, lastRate)
-    }
-
-    var oReq = new XMLHttpRequest()
-    oReq.onload = reqListener
-    oReq.onerror = reqError
-    oReq.open('get', url, true)
-    oReq.send()
+    getRate()
   }, updateFrequencyInMs)
 
-  function reqError (err) {
-    console.log('Fetch Error: ', err)
-  }
-
-  function showRates (rate, lastRate) {
-    var roundedRate = rate.toFixed(2)
-
-    if (rate === lastRate) {
-      formatRate('.rate', '#949494', roundedRate)
-    } else if (rate > lastRate) {
-      formatRate('.rate', '#8bc040', roundedRate)
-    } else if (rate < lastRate) {
-      formatRate('.rate', '#de5f66', roundedRate)
-    }
-  }
-
   function getRate () {
-    lastRate = JSON.parse(this.responseText)[6]
-    showRates(lastRate, lastRate)
-    removeOverlay()
+    fetch(apiUrl)
+    .then(function (response) {
+      return response.json()
+    }).then(function (json) {
+      rate.current = json[6]
+      displayRate(rate.current)
+    }).catch(function (error) {
+      console.log(error)
+    })
   }
 
-  function formatRate (element, color, roundedRate) {
-    document.querySelector(element).style.color = color
-    document.querySelector(element).innerHTML = roundedRate
+  function displayRate (currentRate) {
+    document.querySelector('.rate').innerHTML = currentRate.toFixed(2)
+    removeOverlay()
+    overlayAlreadyRemoved = true
   }
 
   function removeOverlay () {
-    document.querySelector('#overlay').remove()
-    document.body.classList.remove('spinner')
+    if (!overlayAlreadyRemoved) {
+      document.querySelector('#overlay').remove()
+      document.body.classList.remove('spinner')
+    }
   }
-
+  /*
   // register service worker
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker
@@ -68,4 +49,5 @@
         console.log('Service Worker Registered')
       })
   }
+  */
 })()
