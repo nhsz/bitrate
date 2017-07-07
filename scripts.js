@@ -1,6 +1,6 @@
 (function main () {
   /* ----------------------------- CONFIG ----------------------------- */
-  const apiUrl = 'https://api.bitfinex.com/v2/ticker/tBTCUSD'
+  const apiUrl = 'https://www.bitstamp.net/api/ticker/'
   const updateFrequencyInMs = 30000 // exchange rate updated every 30s
   /* ------------------------------------------------------------------ */
 
@@ -21,7 +21,7 @@
     .then(function (response) {
       return response.json()
     }).then(function (json) {
-      rate.current = json[6]
+      rate.current = json.last
       displayRate(rate.current)
     }).catch(function (error) {
       console.log(error)
@@ -29,7 +29,7 @@
   }
 
   function displayRate (currentRate) {
-    document.querySelector('.rate').innerHTML = currentRate.toFixed(2)
+    document.querySelector('.rate').innerHTML = currentRate
     removeOverlay()
     overlayAlreadyRemoved = true
   }
