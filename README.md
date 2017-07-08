@@ -3,7 +3,7 @@
   <br>
 </h1>
 
-> Simple Progressive Web App to visualize current BTC/USD rate, powered by **[`Bitfinex API`](http://docs.bitfinex.com/v2/docs)**.
+> Simple Progressive Web App to visualize current BTC/USD rate, powered by **[`Bitstamp API`](https://www.bitstamp.net/api/)**.
 
 ## License
 
