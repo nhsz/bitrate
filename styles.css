@@ -96,7 +96,7 @@ a, .code-link {
   height: 100%;
 }
 
-.disclaimer {
+.disclaimer, .donate {
   color: rgba(255, 255, 255, 0.8);
   font-size: 0.7em;
   margin-top: 50px;
@@ -106,10 +106,4 @@ a, .code-link {
   color: rgba(255, 255, 255, 0.8);
   font-size: 0.7em;
   margin-top: 10px;
-}
-
-.donate {
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 0.7em;
-  margin-top: 65px;
 }
