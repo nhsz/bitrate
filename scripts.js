@@ -4,19 +4,11 @@
   const updateFrequencyInMs = 30000 // exchange rate updated every 30s
   /* ------------------------------------------------------------------ */
 
-  var rate = {
+  let rate = {
     current: 0
   }
 
-  getRate()
-  document.body.classList.add('spinner')
-  var overlayAlreadyRemoved = false
-
-  setInterval(function () {
-    getRate()
-  }, updateFrequencyInMs)
-
-  function getRate () {
+  const getRate = () => {
     fetch(apiUrl)
     .then(function (response) {
       return response.json()
@@ -28,13 +20,21 @@
     })
   }
 
-  function displayRate (currentRate) {
+  getRate()
+  document.body.classList.add('spinner')
+  let overlayAlreadyRemoved = false
+
+  setInterval(() => {
+    getRate()
+  }, updateFrequencyInMs)
+
+  const displayRate = (currentRate) => {
     document.querySelector('.rate').innerHTML = currentRate
     removeOverlay()
     overlayAlreadyRemoved = true
   }
 
-  function removeOverlay () {
+  const removeOverlay = () => {
     if (!overlayAlreadyRemoved) {
       document.querySelector('#overlay').remove()
       document.body.classList.remove('spinner')
