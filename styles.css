@@ -54,7 +54,7 @@ a:hover {
 }
 
 .footer {
-  margin-top: 33px;
+  margin-top: 70px;
 }
 
 .code {
@@ -96,7 +96,7 @@ a, .code-link {
   height: 100%;
 }
 
-.disclaimer, .donate {
+.disclaimer {
   color: rgba(255, 255, 255, 0.8);
   font-size: 0.7em;
   margin-top: 50px;
